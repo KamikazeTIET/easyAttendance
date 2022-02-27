@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Today's Attendance Record</title>
+    
+</head>
+
+<body style= "background:url(https://wallpapercave.com/wp/wp5210357.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size:100% 100%;">
+
+    <div class="flex items-center justify-center ">
+    
+        <div class="text-pink-100 font-bold">
+            <p style="text-align:center; font-size:30px;">ABSENT</p>
+            <table class="table-auto mt-8 mb-40 bg-pink-400">
+                <tr>
+                  <th class="bg-pink-200 text-purple-900 border text-left px-8 py-4">Name</th>
+                  <th class="bg-pink-200 text-purple-900 border text-left px-8 py-4">Roll No.</th>
+                  <th class="bg-pink-200 text-purple-900 border text-left px-8 py-4">Room No.</th>
+                </tr>
+                {% for st in absent %}
+                <tr>
+                  <td>{{st.student.name}}</td>
+                  <td>{{st.student.roll_no}}</td>
+                  <td>{{st.student.room_no}}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+              
+                <div class="grid gap-8 items-start justify-center">
+                    <div class="text-pink-100 font-bold">
+                        <p style="text-align:center; font-size:30px;">PRESENT</p>
+              <table class="table-auto mt-8 bg-pink-400">
+                <tr>
+                  <th class="bg-pink-200 text-purple-900 font-size- border text-left px-8 py-4">Name</th>
+                  <th class="bg-pink-200 text-purple-900 border text-left px-8 py-4">Roll No.</th>
+                  <th class="bg-pink-200 text-purple-900 border text-left px-8 py-4">Room No.</th>
+                </tr>
+                {% for st in present %}
+                <tr>
+                  <td>{{st.student.name}}</td>
+                  <td>{{st.student.roll_no}}</td>
+                  <td>{{st.student.room_no}}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            
+            </div>
+        </div>
+        
+      </div>
+
+</body>
+</html>
