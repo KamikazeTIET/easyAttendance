@@ -1,6 +1,9 @@
 
 # Hostel Attendance Management System
 
+Explanatory and working YT video 
+
+https://www.youtube.com/watch?v=TUkEbSITSgU&t=50s
 
 ## Tech Stack
 
